@@ -50,3 +50,17 @@ Route::middleware(\App\Http\Middleware\AdminAuth::class)
         Route::put('/blogs/{id}',         [AdminBlogController::class, 'update'])->name('blogs.update');
         Route::delete('/blogs/{id}',      [AdminBlogController::class, 'destroy'])->name('blogs.destroy');
     });
+
+    use Illuminate\Support\Facades\Artisan;
+
+Route::get('/force-seed', function () {
+    try {
+        
+        Artisan::call('db:seed', ['--force' => true]);
+        
+        return 'Success! Output: ' . Artisan::output();
+    } catch (\Exception $e) {
+        
+        return 'Seeding Failed! Error: ' . $e->getMessage();
+    }
+});
