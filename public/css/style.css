@@ -1110,13 +1110,7 @@ footer a { color: var(--orange); }
     margin-bottom: 20px;
     border-radius: 20px;
   }
-  .admin-logo {
-    display: block !important; 
-    margin: 0 auto !important; 
-    max-width: 180px;
-    height: auto;
-    filter: brightness(0) invert(1);
-  }
+
   .admin-sidebar       { transform: translateX(-100%); transition: transform 0.3s; }
   .admin-sidebar.open  { transform: translateX(0); }
   .admin-main          { margin-left: 0; }
@@ -1245,4 +1239,11 @@ footer a { color: var(--orange); }
 
 .nav-close-btn button:hover {
   background: var(--border);
+}
+.admin-logo {
+  display: block !important; 
+  margin: 0 auto !important; 
+  max-width: 180px;
+  height: auto;
+  filter: brightness(0) invert(1);
 }

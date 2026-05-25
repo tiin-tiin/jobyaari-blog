@@ -13,7 +13,7 @@
 
     <div class="login-header" style="text-align: center; margin-bottom: 25px;">
       <img src="{{ asset('jobyaari_logo.png') }}" alt="JobYaari Logo" class="admin-logo">
-      <p style="color: #666; margin-top: 10px; font-size: 0.9rem;">Blog Admin Panel</p>
+      <p style="color: #fff; margin-top: 10px; font-size: 0.9rem;">Blog Admin Panel</p>
     </div>
 
     <div class="login-body">
