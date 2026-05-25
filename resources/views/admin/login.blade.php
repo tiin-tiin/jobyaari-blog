@@ -11,9 +11,9 @@
 <div class="login-page">
   <div class="login-card">
 
-    <div class="login-header">
-      <div class="brand">JOB<span style="color:#FFB800;">YAARI</span></div>
-      <p>Blog Admin Panel</p>
+    <div class="login-header" style="text-align: center; margin-bottom: 25px;">
+      <img src="{{ asset('jobyaari_logo.png') }}" alt="JobYaari Logo" class="admin-logo">
+      <p style="color: #666; margin-top: 10px; font-size: 0.9rem;">Blog Admin Panel</p>
     </div>
 
     <div class="login-body">

@@ -935,7 +935,7 @@ select.form-control { cursor: pointer; }
 /* LOGIN PAGE */
 .login-page {
   min-height: 100vh;
-  background: var(--dark);
+  background: var(--light-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -952,7 +952,7 @@ select.form-control { cursor: pointer; }
 }
 
 .login-header {
-  background: var(--dark);
+  background: var(--orange);
   padding: 32px;
   text-align: center;
   border-bottom: 3px solid var(--orange);
@@ -966,7 +966,7 @@ select.form-control { cursor: pointer; }
 }
 
 .login-header p {
-  color: #888;
+  color: #fff;
   font-size: 0.82rem;
   margin-top: 4px;
 }
