@@ -30,4 +30,6 @@ RUN chmod +x /start.sh
 
 EXPOSE 80
 RUN php artisan migrate --force
+
+RUN php artisan migrate --force && php artisan db:seed --class=BlogSeeder --force
 CMD ["/start.sh"]
