@@ -2,6 +2,8 @@
 
 A full-stack Blog Management System built for the JobYaari Developer Assessment. Features a public blog listing page with AJAX filtering and a complete admin panel for managing blog posts.
 
+![JobYaari Blog Preview](./demo.png)
+
 **Live Demo:** https://jobyaari-blog-production-a9eb.up.railway.app/blog  
 **Admin Panel:** https://jobyaari-blog-production-a9eb.up.railway.app/admin 
 
