@@ -176,7 +176,7 @@ The filter works without any page reload:
 
 ## Acknowledgements & Copyright
 
-**© 2026 [JobYaari.com](https://www.jobyaari.com) — All Rights Reserved.**
+**© 2026 JobYaari. All Rights Reserved.**
 
 This project was developed entirely as part of the JobYaari Developer Assessment. All branding, logos, and trademarks belong exclusively to [JobYaari.com](https://www.jobyaari.com). This is a candidate assessment project and is not an official JobYaari product.
 
