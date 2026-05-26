@@ -107,16 +107,18 @@
 
 <script>
   tinymce.init({
-      selector: '#content', // Targets the textarea ID
+      selector: '#content',
       height: 500,
-      menubar: false, 
-      plugins: 'advlist autolink lists link image charmap preview searchreplace visualblocks fullscreen insertdatetime media table wordcount',
-      toolbar: 'undo redo | fontfamily fontsize | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image table | removeformat',
-      font_size_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
+      menubar: true,
+      plugins: [
+          'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+          'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+          'insertdatetime', 'media', 'table', 'help', 'wordcount'
+      ],
+      toolbar: 'undo redo | bold italic underline strikethrough | superscript subscript | forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | link image media table | charmap fullscreen code',
       content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }',
-      skin: 'oxide',
-      promotion: false, 
-      branding: false   
+      branding: false,
+      promotion: false
   });
 </script>
 
