@@ -60,7 +60,7 @@ A full-stack Blog Management System built for the JobYaari Developer Assessment.
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/your-username/jobyaari-blog.git
+git clone https://github.com/tiin-tiin/jobyaari-blog.git
 cd jobyaari-blog
 ```
 
