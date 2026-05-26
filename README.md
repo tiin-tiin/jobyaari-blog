@@ -172,3 +172,11 @@ The filter works without any page reload:
 4. Response returns `{ html, count }` as JSON
 5. jQuery replaces `#blogs-container` content instantly
 
+---
+
+## Acknowledgements & Copyright
+
+**© 2026 [JobYaari.com](https://www.jobyaari.com) — All Rights Reserved.**
+
+*Disclaimer: This project was developed entirely as part of the JobYaari Developer Assessment. All branding, logos, and trademarks belong exclusively to [JobYaari.com](https://www.jobyaari.com). This is a candidate assessment project and is not an official JobYaari product.*
+
