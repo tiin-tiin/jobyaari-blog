@@ -33,6 +33,14 @@ console.log("app.js is successfully loaded!");
         $(this).addClass('active');
         activeCategory = $(this).data('category');
         runFilter();
+
+        
+        if ($('#sidebar-menu').hasClass('open')) {
+            $('#sidebar-menu').removeClass('open');
+            $('#sidebar-overlay').fadeOut(200);
+            $('body').css('overflow', ''); 
+            $('#sidebar-toggle-btn').text('Show Categories & Recent Posts');
+        }
       });
   
       // Date filter
