@@ -51,4 +51,15 @@ Route::middleware(\App\Http\Middleware\AdminAuth::class)
         Route::delete('/blogs/{id}',      [AdminBlogController::class, 'destroy'])->name('blogs.destroy');
     });
 
+    use Illuminate\Support\Facades\File;
+
+    Route::get('/storage/blogs/{filename}', function ($filename) {
+        $path = storage_path('app/public/blogs/' . $filename);
+        
+        if (!File::exists($path)) {
+            abort(404);
+        }
+        
+        return response()->file($path);
+    });
 
