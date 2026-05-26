@@ -78,10 +78,13 @@
       {{-- Content --}}
       <div class="form-group">
         <label class="form-label" for="content">Full Content <span class="req">*</span></label>
+        
+        {{-- TINYMCE will automatically transform this textarea --}}
         <textarea id="content" name="content" class="form-control {{ $errors->has('content') ? 'is-invalid' : '' }}"
-          rows="14" placeholder="Write the full blog post content here…" required>{{ old('content') }}</textarea>
+          rows="14" placeholder="Write the full blog post content here…">{{ old('content') }}</textarea>
+        
         @error('content') <div class="invalid-feedback">{{ $message }}</div> @enderror
-        <div class="form-hint">HTML is supported. You can use headings, lists, and links.</div>
+        <div class="form-hint">Use the editor above to format your post.</div>
       </div>
 
     </div>
@@ -100,6 +103,23 @@
 @endsection
 
 @push('admin-scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.3/tinymce.min.js"></script>
+
+<script>
+  tinymce.init({
+      selector: '#content', // Targets the textarea ID
+      height: 500,
+      menubar: false, 
+      plugins: 'advlist autolink lists link image charmap preview searchreplace visualblocks fullscreen insertdatetime media table wordcount',
+      toolbar: 'undo redo | fontfamily fontsize | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image table | removeformat',
+      font_size_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
+      content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }',
+      skin: 'oxide',
+      promotion: false, 
+      branding: false   
+  });
+</script>
+
 <script>
 $(function() {
   // Show preview box when file selected

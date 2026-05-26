@@ -114,6 +114,23 @@
 @endsection
 
 @push('admin-scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.3/tinymce.min.js"></script>
+
+<script>
+  tinymce.init({
+      selector: '#content', // Targets the textarea ID
+      height: 500,
+      menubar: false, 
+      plugins: 'advlist autolink lists link image charmap preview searchreplace visualblocks fullscreen insertdatetime media table wordcount',
+      toolbar: 'undo redo | fontfamily fontsize | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image table | removeformat',
+      font_size_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
+      content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }',
+      skin: 'oxide',
+      promotion: false, 
+      branding: false   
+  });
+</script>
+
 <script>
 $(function() {
   $('#image-input').on('change', function() {
