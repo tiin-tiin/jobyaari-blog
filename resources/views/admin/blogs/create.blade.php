@@ -62,7 +62,7 @@
           <label class="form-label" for="image">Featured Image</label>
           <input type="file" id="image-input" name="image" class="form-control" accept="image/jpeg,image/png,image/webp">
           @error('image') <div class="invalid-feedback">{{ $message }}</div> @enderror
-          <div class="form-hint">JPG, PNG, WebP — max 2MB. Recommended: 1200×630px</div>
+          <div class="form-hint">JPG, PNG, WebP — max 1MB. Recommended: 1200×630px</div>
         </div>
       </div>
 
@@ -185,16 +185,28 @@
 
 <script>
 $(function() {
-  // Show preview box when file selected
   $('#image-input').on('change', function() {
+    
+    
     if (this.files.length) {
+      const file = this.files[0];
+      
+      
+      if (file.size > 1048576) {
+          alert("Whoops! That image is too large. Please keep it under 1MB.");
+          this.value = ''; 
+          $('#img-preview-box').hide(); 
+          return; 
+      }
+
+      
       $('#img-preview-box').show();
       var reader = new FileReader();
       reader.onload = function(e) {
         $('#img-preview').attr('src', e.target.result).show();
         $('.img-placeholder-text').hide();
       };
-      reader.readAsDataURL(this.files[0]);
+      reader.readAsDataURL(file);
     }
   });
 });
