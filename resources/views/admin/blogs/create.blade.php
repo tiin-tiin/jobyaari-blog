@@ -181,7 +181,7 @@
     branding: false,
     promotion: false
   });
-</script>>
+</script>
 
 <script>
 $(function() {
