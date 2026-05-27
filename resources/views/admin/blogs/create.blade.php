@@ -107,20 +107,81 @@
 
 <script>
   tinymce.init({
-      selector: '#content',
-      height: 500,
-      menubar: true,
-      plugins: [
-          'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
-          'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-          'insertdatetime', 'media', 'table', 'help', 'wordcount'
-      ],
-      toolbar: 'undo redo | bold italic underline strikethrough | superscript subscript | forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | link image media table | charmap fullscreen code',
-      content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }',
-      branding: false,
-      promotion: false
+    selector: '#content',
+    height: 700,
+    menubar: 'file edit view insert format tools table help',
+    
+    
+    plugins: [
+      'accordion', 'advlist', 'anchor', 'autolink', 'autosave', 'charmap', 'code', 
+      'codesample', 'directionality', 'emoticons', 'fullscreen', 'help', 'image', 
+      'importcss', 'insertdatetime', 'link', 'lists', 'media', 'nonbreaking', 
+      'pagebreak', 'preview', 'quickbars', 'save', 'searchreplace', 'table', 
+      'template', 'visualblocks', 'visualchars', 'wordcount'
+    ],
+    
+    
+    toolbar1: 'undo redo | restoredraft | blocks fontfamily fontsize | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent | numlist bullist | forecolor backcolor removeformat',
+    toolbar2: 'pagebreak anchor codesample template | insertfile image media link | table accordion | charmap emoticons | ltr rtl | visualblocks visualchars fullscreen preview code | save print',
+    
+    
+    font_family_formats: 'Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Courier New=courier new,courier; Times New Roman=times new roman,times; Verdana=verdana,geneva;',
+    font_size_formats: '8pt 10pt 12pt 14pt 16pt 18pt 24pt 36pt 48pt',
+    
+    
+    color_map: [
+      "000000", "Black",
+      "993300", "Burnt orange",
+      "333300", "Dark olive",
+      "003300", "Dark green",
+      "003366", "Dark azure",
+      "000080", "Navy Blue",
+      "333399", "Indigo",
+      "333333", "Very dark gray",
+      "800000", "Maroon",
+      "FF6600", "Orange",
+      "808000", "Olive",
+      "008000", "Green",
+      "008080", "Teal",
+      "0000FF", "Blue",
+      "666699", "Grayish blue",
+      "808080", "Gray",
+      "FF0000", "Red",
+      "FF9900", "Amber",
+      "99CC00", "Yellow green",
+      "339966", "Sea green",
+      "33CCCC", "Turquoise",
+      "3366FF", "Royal blue",
+      "800080", "Purple",
+      "999999", "Medium gray"
+    ],
+    
+    
+    image_advtab: true, 
+    image_caption: true, 
+    quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+    nonbreaking_force_tab: true, 
+    toolbar_mode: 'sliding', 
+    contextmenu: 'link image table',
+    
+    
+    templates: [
+        { title: 'New Story', description: 'Basic template for a new article', content: '<h3>Starting Point</h3><p>Write your introduction here...</p>' },
+        { title: 'Review Format', description: 'Structured review layout', content: '<h3>Pros</h3><ul><li></li></ul><h3>Cons</h3><ul><li></li></ul>' }
+    ],
+
+    
+    autosave_ask_before_unload: true,
+    autosave_interval: '30s',
+    autosave_prefix: '{path}{query}-{id}-',
+    autosave_restore_when_empty: false,
+    autosave_retention: '2m',
+    
+    
+    branding: false,
+    promotion: false
   });
-</script>
+</script>>
 
 <script>
 $(function() {
